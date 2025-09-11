@@ -2,68 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hussain (husayni) - GitHub Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hussain (husayni) — AI Engineer and LLM researcher. Projects, news, and links.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://husayni.github.io/">
+  <title>Hussain (husayni) — AI Engineer & LLM Researcher</title>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Hussain (husayni)">
+  <meta property="og:description" content="AI Engineer and LLM researcher. Projects, news, and links.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://husayni.github.io/">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/51231290?v=4">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hussain (husayni)">
+  <meta name="twitter:description" content="AI Engineer and LLM researcher. Projects, news, and links.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/51231290?v=4">
+
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; line-height: 1.6; }
-    img.avatar { border-radius: 50%; width: 150px; }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    h2 { margin-top: 2rem; }
-    ul { list-style-type: none; padding: 0; }
-    li { margin-bottom: 0.5rem; }
-    a { color: #0366d6; text-decoration: none; }
+    :root {
+      color-scheme: light dark;
+      --text: #111;
+      --muted: #555;
+      --link: #0366d6;
+      --bg: #fff;
+      --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #e5e7eb;
+        --muted: #a1a1aa;
+        --link: #60a5fa;
+        --bg: #0b0f14;
+        --border: #1f2937;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .container { max-width: 820px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+    header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+    header .meta { color: var(--muted); margin-top: 0.25rem; }
+    img.avatar { border-radius: 50%; width: 112px; height: 112px; display: block; border: 1px solid var(--border); }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0; }
+    h2 { margin: 2rem 0 0.5rem; font-size: 1.25rem; }
+    section + section { border-top: 1px solid var(--border); padding-top: 1rem; }
+    ul { padding-left: 1rem; }
+    li { margin: 0.35rem 0; }
+    a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .highlight { font-weight: 600; }
+    .skip-link { position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+    .skip-link:focus { position: static; width: auto; height: auto; padding: 0.5rem; background: var(--border); display: inline-block; }
+    footer { margin-top: 2rem; color: var(--muted); }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://avatars.githubusercontent.com/u/51231290?v=4" alt="Hussain's avatar" class="avatar">
-    <h1>Hussain</h1>
-    <p>AI Engineer / LLM Researcher</p>
-  </header>
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an MSc Artificial Intelligence candidate at Cardiff University with over 4 years of experience as a Machine Learning Engineer. My work spans building LLM-based AI Agents, conducting LLM research, and developing intelligent systems with Computer Vision.
-    </p>
-    <p>
-      I’m a Microsoft Certified <span class="highlight">Azure AI Engineer Associate</span> and <span class="highlight">Azure Data Scientist Associate</span>.
-    </p>
-    <p>
-      Currently, I’m part of the <span class="highlight">Algoverse AI Fellowship</span>, where I’m conducting research on <span class="highlight">mechanistic interpretability</span>. For my Master’s dissertation, I’m building a benchmark to evaluate LLMs on underspecified questions.
-    </p>
-    <p>
-      I’m always open to collaborations—whether it’s AI research, LLM tooling, or new ideas in tech. Feel free to connect!
-    </p>
-  </section>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="container">
+    <header>
+      <img
+        src="https://avatars.githubusercontent.com/u/51231290?v=4"
+        alt="Portrait of Hussain"
+        class="avatar"
+        width="112"
+        height="112"
+        loading="eager"
+        decoding="async"
+      >
+      <div>
+        <h1>Hussain</h1>
+        <p class="meta">AI Engineer · LLM Researcher</p>
+      </div>
+    </header>
 
-  <section>
-    <h2>Notable Projects</h2>
-    <ul>
-      <li>An intelligent coding agent with 600+ beta users</li>
-      <li>Vitiligo Progression Analysis used at a top US dermatology institute</li>
-      <li>Real-time Multi-Camera Vehicle Tracking System (demoed to Formula 1 operations staff)</li>
-      <li>Sports Card Identification System (Ludex app), which has over 3 million users</li>
-    </ul>
-  </section>
+    <main id="main" tabindex="-1">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am an MSc Artificial Intelligence candidate at Cardiff University with over 4 years of experience as a Machine Learning Engineer. My work spans building LLM-based AI agents, conducting LLM research, and developing intelligent systems with Computer Vision.
+        </p>
+        <p>
+          I’m a Microsoft Certified <span class="highlight">Azure AI Engineer Associate</span> and <span class="highlight">Azure Data Scientist Associate</span>.
+        </p>
+        <p>
+          Currently, I’m part of the <span class="highlight">Algoverse AI Fellowship</span>, where I’m conducting research on <span class="highlight">mechanistic interpretability</span>. For my Master’s dissertation, I’m building a benchmark to evaluate LLMs on underspecified questions.
+        </p>
+        <p>
+          I’m open to collaborations—AI research, LLM tooling, and new ideas in tech. Feel free to connect.
+        </p>
+      </section>
 
-  <section>
-    <h2>Links</h2>
-    <ul>
-      <li><a href="https://github.com/husayni">GitHub Profile</a></li>
-      <li><a href="https://www.linkedin.com/in/syehussain">LinkedIn</a></li>
-      <li><a href="mailto:hussainsyed.dev@gmail.com">Email Me</a></li>
-    </ul>
-  </section>
-  <section>
-    <h2>Pinned Projects</h2>
-    <ul>
-      <li><a href="https://gist.github.com/husayni/5656caba908e4e73053272f485e986ca">Normcore LLM Reads</a></li>
-      <li><a href="https://github.com/husayni/annotated_deep_learning_paper_implementations">Annotated Deep Learning Paper Implementations</a></li>
-    </ul>
-  </section>
-  <footer>
-    <p>Follow me on <a href="https://github.com/husayni">GitHub</a> – <a href="https://github.com/husayni?tab=followers">3 followers</a> · <a href="https://github.com/husayni?tab=following">8 following</a>.</p>
-  </footer>
+      <section id="news">
+        <h2>News</h2>
+        <ul>
+          <li>I completed my MSc with distinction.</li>
+          <li>Selected for the <a href="https://sparai.org/" rel="noopener">SPAR AI Fellowship</a>.</li>
+          <li>Joined the <span class="highlight">Algoverse AI Fellowship</span>.</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Notable Projects</h2>
+        <ul>
+          <li>Intelligent coding agent with 600+ beta users.</li>
+          <li>Vitiligo Progression Analysis used at a top US dermatology institute.</li>
+          <li>Real-time multi-camera vehicle tracking (demoed to Formula 1 operations staff).</li>
+          <li>Sports card identification for the Ludex app (3M+ users).</li>
+        </ul>
+      </section>
+
+      <section id="links">
+        <h2>Links</h2>
+        <ul>
+          <li><a href="https://github.com/husayni" rel="me noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/syehussain" rel="me noopener">LinkedIn</a></li>
+          <li><a href="mailto:hussainsyed.dev@gmail.com">Email</a></li>
+        </ul>
+      </section>
+
+      <section id="pinned">
+        <h2>Pinned Projects</h2>
+        <ul>
+          <li><a href="https://github.com/husayni/gsm-u">GSM-U: Evaluating LLMs on Underspecified Questions</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Follow me on <a href="https://github.com/husayni">GitHub</a> ·
+        <a href="https://github.com/husayni?tab=followers">Followers</a> ·
+        <a href="https://github.com/husayni?tab=following">Following</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
